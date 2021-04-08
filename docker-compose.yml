@@ -1,0 +1,16 @@
+version: '3'
+services:
+  detailed_collector:
+    build:
+      context: .
+      dockerfile: Dockerfile.detailed_collector
+    ports:
+     - "9300:9300/udp"
+    restart: always
+#  summary_collector:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile.summary_collector
+#    ports:
+#     - "9301:9301/udp"
+#    restart: always
